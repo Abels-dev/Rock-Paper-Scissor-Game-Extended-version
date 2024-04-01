@@ -65,3 +65,84 @@ figure img{
     font-size: 3rem;
     font-weight: 700;
 }
+.startGame{
+    /* display: none; */
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 350px;
+    padding: 3rem;
+    margin: 50px auto;
+    margin-bottom: 90px;
+    background: url('images/bg-pentagon.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+button{
+    width: 95px;
+    height: 90px;
+    border-radius: 50%;
+    margin-left: 40px;
+    margin-bottom: 40px;
+    border: 0;
+}
+.scissors{
+    position: absolute;
+    top: 0;
+    left: 25%;
+    box-shadow: inset 1px 8px hsl(0, 20%, 88%,0.7), 0px 8px 0px 15px hsl(39, 89%, 37%);
+    outline: 16px solid  hsl(40, 84%, 53%);
+}
+.rock{
+    position: absolute;
+    right: 60px;
+    bottom: -15%;
+    box-shadow: inset 1px 8px hsl(0, 20%, 88%,0.7),0px 8px 0px 15px hsl(349, 71%, 52%);
+    outline: 16px solid hsl(349, 70%, 56%);
+}
+.lizard{
+    position: absolute;
+    bottom: -15%;
+    left: 15px;
+    box-shadow: inset 1px 8px hsl(0, 20%, 88%,0.7),0px 8px 0px 15px hsl(261, 73%, 60%);
+    outline: 16px solid hsl(261, 72%, 63%);
+}
+.spock{
+    position: absolute;
+    left: -50px;
+    top: 30%;
+    box-shadow: inset 1px 8px hsl(0, 20%, 88%,0.7),0px 8px 0px 15px hsl(189, 59%, 43%);
+    outline: 16px solid hsl(189, 58%, 57%);
+}
+.paper{
+    position: absolute;
+    right: 0;
+    top: 30%;
+    box-shadow: inset 1px 8px hsl(0, 20%, 88%,0.7),0px 8px 0px 15px hsl(230, 89%, 60%);
+    outline: 16px solid hsl(230, 89%, 65%);
+}
+.inGame{
+    width: 100%;
+    max-width: 550px;
+    display: flex;
+    margin: 30px auto;
+    display: none;
+}
+.player,.house,.status{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.status button{
+    height: 35px;
+    width: 150px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--Dark-Text);
+    display: grid;
+    place-content: center;
+    margin-top: 10px;
+}

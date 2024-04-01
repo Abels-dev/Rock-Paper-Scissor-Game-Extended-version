@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Rock, Paper, Scissors</title>
-<!-- 
+      <link
+         rel="icon"
+         type="image/png"
+         sizes="32x32"
+         href="./images/favicon-32x32.png" />
+
+      <title>Frontend Mentor | Rock, Paper, Scissors</title>
+      <!-- 
   Score
   Rules
 
@@ -18,29 +23,58 @@
   You Lose
 
   Play Again -->
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  <header>
-    <section class="header-section">
-      <figure>
-        <img src="images/logo-bonus.svg" alt="">
-      </figure>
-      <div>
-        <p class="scoreText">Score</p>
-        <p class="score">12</p>
-      </div>
-    </section>
-  </header>
+      <link rel="stylesheet" href="style.css" />
+      <style>
+         .attribution {
+            font-size: 11px;
+            text-align: center;
+         }
+         .attribution a {
+            color: hsl(228, 45%, 44%);
+         }
+      </style>
+   </head>
+   <body>
+      <header>
+         <section class="header-section">
+            <figure>
+               <img src="images/logo-bonus.svg" alt="" />
+            </figure>
+            <div>
+               <p class="scoreText">Score</p>
+               <p class="score">12</p>
+            </div>
+         </section>
+      </header>
+      <main>
+         <section class="startGame">
+            <button class="scissors"><img src="images/icon-scissors.svg" alt="" /></button>
+            <button class="spock"><img src="images/icon-spock.svg" alt="" /></button>
+            <button class="lizard"><img src="images/icon-lizard.svg" alt="" /></button>
+            <button class="rock"><img src="images/icon-rock.svg" alt="" /></button>
+            <button class="paper"><img src="images/icon-paper.svg" alt="" /></button>
+         </section>
+         <section class="inGame">
+            <div class="player">
+              <p>You picked</p>
+              <button><img src="images/icon-spock.svg" alt=""></button>
+            </div>
+            <div class="status">
+              <p>You Lost</p>
+              <button>play again</button>
+            </div>
+            <div class="house">
+              <p>The house picked</p>
+              <button><img src="images/icon-lizard.svg" alt=""></button>
+            </div>
+         </section>
+      </main>
 
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      <div class="attribution">
+         Challenge by
+         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+         >. Coded by <a href="#">Your Name Here</a>.
+      </div>
+   </body>
 </html>
