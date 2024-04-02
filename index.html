@@ -4,7 +4,6 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <!-- displays site properly based on user's device -->
-
       <link
          rel="icon"
          type="image/png"
@@ -12,75 +11,56 @@
          href="./images/favicon-32x32.png" />
 
       <title>Frontend Mentor | Rock, Paper, Scissors</title>
-      <!-- 
-  Score
-  Rules
-
-  You Picked
-  The House Picked
-
-  You Win
-  You Lose
-
-  Play Again -->
       <link rel="stylesheet" href="style.css" />
-      <style>
-         .attribution {
-            font-size: 11px;
-            text-align: center;
-         }
-         .attribution a {
-            color: hsl(228, 45%, 44%);
-         }
-      </style>
+      <script src="script.js" defer></script>
    </head>
-   <body>
-      <header>
+   <body id="body">
+      <header class="non-rules">
          <section class="header-section">
             <figure>
                <img src="images/logo-bonus.svg" alt="" />
             </figure>
             <div>
                <p class="scoreText">Score</p>
-               <p class="score">12</p>
+               <p class="score" id="score"></p>
             </div>
          </section>
       </header>
-      <main>
+      <main class="non-rules">
          <section class="startGame">
-            <button class="scissorsbtn"><img src="images/icon-scissors.svg" alt="" /></button>
-            <button class="spockbtn"><img src="images/icon-spock.svg" alt="" /></button>
-            <button class="lizardbtn"><img src="images/icon-lizard.svg" alt="" /></button>
-            <button class="rockbtn"><img src="images/icon-rock.svg" alt="" /></button>
-            <button class="paperbtn"><img src="images/icon-paper.svg" alt="" /></button>
+            <button class="scissorsbtn gameButtons"><img src="images/icon-scissors.svg" alt="" /></button>
+            <button class="spockbtn gameButtons"><img src="images/icon-spock.svg" alt="" /></button>
+            <button class="lizardbtn gameButtons"><img src="images/icon-lizard.svg" alt="" /></button>
+            <button class="rockbtn gameButtons"><img src="images/icon-rock.svg" alt="" /></button>
+            <button class="paperbtn gameButtons"><img src="images/icon-paper.svg" alt="" /></button>
          </section>
          <section class="inGame">
             <div class="player">
               <p>You picked</p>
-              <button class="scissors"><img src="images/icon-scissors.svg" alt=""></button>
+              <button class="scissors" id="userChoice"><img src="images/icon-scissors.svg" alt=""></button>
             </div>
             <div class="status">
-              <p>You Lose</p>
-              <button>play again</button>
+              <p id="result">You Lose</p>
+              <button id="playAgain">play again</button>
             </div>
             <div class="house">
               <p>The house picked</p>
-              <button class=" housebtn">
+              <button class=" housebtn" id="houseChoice">
                <!-- <img src="images/icon-spock.svg" alt=""> -->
             </button>
             </div>
          </section>
-         <section class="rules">
-            <div>
-               <h2>Rules</h2>
-               <button><img src="images/icon-close.svg" alt=""></button>
-            </div>
-            <figure>
-               <img src="images/image-rules-bonus.svg" alt="">
-            </figure>
-         </section>
       </main>
-      <footer>
+      <section class="rules" id="rules">
+         <div>
+            <h2>Rules</h2>
+            <button id="close"><img src="images/icon-close.svg" alt=""></button>
+         </div>
+         <figure>
+            <img src="images/image-rules-bonus.svg" alt="">
+         </figure>
+      </section>
+      <footer class="non-rules">
          <button class="rulesbtn">Rules</button>
       </footer>
    </body>
