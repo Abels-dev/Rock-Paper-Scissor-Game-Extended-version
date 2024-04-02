@@ -27,7 +27,7 @@ const houseChoice = (choice) => {
 };
 let userScore = 0;
 if (Number(localStorage.getItem("score")) != null)
-   userScore = Number(localStorage.getItem("score"));
+   userScore = Number(localStorage.getItem("score")); // get the score from the localStorage
 score.textContent = userScore;
 const scoreTracker = (winStatus) => {
    if (winStatus) {
@@ -42,7 +42,7 @@ const statusDisplay = () => {
    score.textContent = userScore;
 };
 const gamePlay = (choice) => {
-   let isWin;
+   let isWin;  // tracks the win or lose of the player
    let computerChoice = getComputerChoice();
    if (choice === computerChoice) {
       result.textContent = "You Draw";
@@ -74,7 +74,7 @@ gameButtons.forEach((gameButton, index) => {
       let computerChoice = gamePlay(choices[index]);
       setTimeout(() => houseChoice(computerChoice), 1000);
       setTimeout(statusDisplay, 2000);
-      playAgain.onclick = () => {
+      playAgain.onclick = () => {  // reset the changes and start the game again 
          inGamePage.style.display = "none";
          houseChoiced.innerHTML = ``;
          houseChoiced.classList.remove(computerChoice);
