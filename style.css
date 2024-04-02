@@ -1,272 +1,285 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
 }
-:root{
-    /* ## Colors
+:root {
+   /* ## Colors
 
     ### Primary */
 
-    --Scissors-Gradient: hsl(39, 89%, 49%) to hsl(40, 84%, 53%);
-    --Paper-Gradient: hsl(230, 89%, 62%) to hsl(230, 89%, 65%);
-    --Rock-Gradient: hsl(349, 71%, 52%) to hsl(349, 70%, 56%);
-    --Lizard-Gradient: hsl(261, 73%, 60%) to hsl(261, 72%, 63%);
-    --Cyan:hsl(189, 59%, 53%) to hsl(189, 58%, 57%);
+   --Scissors-Gradient: hsl(39, 89%, 49%) to hsl(40, 84%, 53%);
+   --Paper-Gradient: hsl(230, 89%, 62%) to hsl(230, 89%, 65%);
+   --Rock-Gradient: hsl(349, 71%, 52%) to hsl(349, 70%, 56%);
+   --Lizard-Gradient: hsl(261, 73%, 60%) to hsl(261, 72%, 63%);
+   --Cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%);
 
-    /* ### Neutral */
+   /* ### Neutral */
 
---Dark-Text: hsl(229, 25%, 31%);
---Score-Text: hsl(229, 64%, 46%);
---Header-Outline: hsl(217, 16%, 45%);
-  /* ### Background */
- --Radial-Gradient: hsl(214, 47%, 23%) to hsl(237, 49%, 15%);
+   --Dark-Text: hsl(229, 25%, 31%);
+   --Score-Text: hsl(229, 64%, 46%);
+   --Header-Outline: hsl(217, 16%, 45%);
+   /* ### Background */
+   --Radial-Gradient: hsl(214, 47%, 23%) to hsl(237, 49%, 15%);
 }
-body{
-    position: relative;
-    min-height: 100vh;
-    background: radial-gradient(hsl(214, 47%, 23%),hsl(237, 49%, 15%));
-    font-family: "Barlow Semi Condensed", sans-serif;
+body {
+   position: relative;
+   min-height: 100vh;
+   background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+   font-family: "Barlow Semi Condensed", sans-serif;
 }
-.header-section{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 600px;
-    height: 120px;
-    margin: 40px auto;
-    padding: 1rem;
-    padding-left: 1.4rem;
-    border: 2px solid var(--Header-Outline);
-    border-radius: 15px;
+.header-section {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+   max-width: 600px;
+   height: 120px;
+   margin: 40px auto;
+   padding: 1rem;
+   padding-left: 1.4rem;
+   border: 2px solid var(--Header-Outline);
+   border-radius: 15px;
 }
-figure img{
-    width: 90px;
-    height: auto;
+figure img {
+   width: 90px;
+   height: auto;
 }
-.header-section div{
-    background-color: #fff;
-    width: 120px;
-    height: 90px;
-    border-radius: 6px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.header-section div {
+   background-color: #fff;
+   width: 120px;
+   height: 90px;
+   border-radius: 6px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
 }
-.scoreText{
-    color: var(--Score-Text);
-    text-transform: uppercase;
-    font-weight: 600;
+.scoreText {
+   color: var(--Score-Text);
+   text-transform: uppercase;
+   font-weight: 600;
 }
-.score{
-    color: var(--Dark-Text);
-    font-size: 3rem;
-    font-weight: 700;
+.score {
+   color: var(--Dark-Text);
+   font-size: 3rem;
+   font-weight: 700;
 }
-.startGame{
-    /* display: none; */
-    position: relative;
-    width: 100%;
-    max-width: 400px;
-    height: 350px;
-    padding: 3rem;
-    margin: 50px auto;
-    margin-bottom: 90px;
-    background: url('images/bg-pentagon.svg');
-    background-position: center;
-    background-repeat: no-repeat;
+.startGame {
+   /* display: none; */
+   position: relative;
+   width: 100%;
+   max-width: 400px;
+   height: 350px;
+   padding: 2rem;
+   margin: 50px auto;
+   margin-bottom: 80px;
+   background: url("images/bg-pentagon.svg");
+   background-position: center;
+   background-repeat: no-repeat;
 }
-button{
-    width: 95px;
-    height: 90px;
-    border-radius: 50%;
-    margin-left: 40px;
-    margin-bottom: 40px;
-    border: 0;
+button {
+   width: 95px;
+   height: 90px;
+   border-radius: 50%;
+   margin-left: 40px;
+   margin-bottom: 40px;
+   border: 0;
 }
-.scissorsbtn{
-    position: absolute;
-    top: 0;
-    left: 25%;
-    box-shadow: inset 1px 8px hsl(0, 20%, 88%,0.7), 0px 8px 0px 15px hsl(39, 89%, 37%);
-    outline: 16px solid  hsl(40, 84%, 53%);
+.scissorsbtn {
+   position: absolute;
+   top: 0;
+   left: 25%;
+   box-shadow: inset 1px 8px hsl(0, 20%, 88%, 0.7),
+      0px 8px 0px 15px hsl(39, 89%, 37%);
+   outline: 16px solid hsl(40, 84%, 53%);
 }
-.rockbtn{
-    position: absolute;
-    right: 60px;
-    bottom: -15%;
-    box-shadow: inset 1px 8px hsl(0, 20%, 88%,0.7),0px 8px 0px 15px hsl(349, 71%, 52%);
-    outline: 16px solid hsl(349, 70%, 56%);
+.rockbtn {
+   position: absolute;
+   right: 60px;
+   bottom: -15%;
+   box-shadow: inset 1px 8px hsl(0, 20%, 88%, 0.7),
+      0px 8px 0px 15px hsl(349, 71%, 52%);
+   outline: 16px solid hsl(349, 70%, 56%);
 }
-.lizardbtn{
-    position: absolute;
-    bottom: -15%;
-    left: 15px;
-    box-shadow: inset 1px 8px hsl(0, 20%, 88%,0.7),0px 8px 0px 15px hsl(261, 73%, 60%);
-    outline: 16px solid hsl(261, 72%, 63%);
+.lizardbtn {
+   position: absolute;
+   bottom: -15%;
+   left: 15px;
+   box-shadow: inset 1px 8px hsl(0, 20%, 88%, 0.7),
+      0px 8px 0px 15px hsl(261, 73%, 60%);
+   outline: 16px solid hsl(261, 72%, 63%);
 }
-.spockbtn{
-    position: absolute;
-    left: -50px;
-    top: 30%;
-    box-shadow: inset 1px 8px hsl(0, 20%, 88%,0.7),0px 8px 0px 15px hsl(189, 59%, 43%);
-    outline: 16px solid hsl(189, 58%, 57%);
+.spockbtn {
+   position: absolute;
+   left: -50px;
+   top: 30%;
+   box-shadow: inset 1px 8px hsl(0, 20%, 88%, 0.7),
+      0px 8px 0px 15px hsl(189, 59%, 43%);
+   outline: 16px solid hsl(189, 58%, 57%);
 }
-.paperbtn{
-    position: absolute;
-    right: 0;
-    top: 30%;
-    box-shadow: inset 1px 8px hsl(0, 20%, 88%,0.7),0px 8px 0px 15px hsl(230, 89%, 60%);
-    outline: 16px solid hsl(230, 89%, 65%);
+.paperbtn {
+   position: absolute;
+   right: 0;
+   top: 30%;
+   box-shadow: inset 1px 8px hsl(0, 20%, 88%, 0.7),
+      0px 8px 0px 15px hsl(230, 89%, 60%);
+   outline: 16px solid hsl(230, 89%, 65%);
 }
-.inGame{
-    width: 100%;
-    max-width: 600px;
-    display: flex;
-    margin: 50px auto;
-    justify-content: center;
-    display: none;
+.inGame {
+   width: 100%;
+   max-width: 600px;
+   display: flex;
+   margin: 50px auto;
+   justify-content: center;
+   display: none;
 }
-.player,.house,.status{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.player,
+.house,
+.status {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
 }
-.house{
-    margin-left: 30px;
+.house {
+   margin-left: 30px;
 }
-.player{
-    margin-right: 30px;
-    /* background: repeating-radial-gradient(circle at 50%, hsl(214, 47%, 23%) 15%, hsl(237, 49%, 15%) 30%); */
+.player {
+   margin-right: 30px;
+   /* background: repeating-radial-gradient(circle at 50%, hsl(214, 47%, 23%) 15%, hsl(237, 49%, 15%) 30%); */
 }
-.status{
-    /* display: none; */
-    margin-top: 50px;
-    align-self: center;
+.status {
+   display: none;
+   margin-top: 50px;
+   align-self: center;
 }
-.status button{
-    height: 35px;
-    width: 150px;
-    border-radius: 8px;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 0.8rem;
-    color: var(--Dark-Text);
-    display: grid;
-    place-content: center;
-    margin-top: 5px;
+.status button {
+   height: 35px;
+   width: 150px;
+   border-radius: 8px;
+   text-transform: uppercase;
+   font-weight: 600;
+   font-size: 0.8rem;
+   color: var(--Dark-Text);
+   display: grid;
+   place-content: center;
+   margin-top: 5px;
 }
-.player p, .house p{
-    color: #fff;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 1.1rem;
-    margin-bottom: 55px;
-    padding-left: 10px;
-    letter-spacing: 1px;
+.player p,
+.house p {
+   color: #fff;
+   font-weight: 700;
+   text-transform: uppercase;
+   font-size: 1.1rem;
+   margin-bottom: 55px;
+   padding-left: 10px;
+   letter-spacing: 1px;
 }
-.status p{
-    color: #fff;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 1.8rem;
-    padding-left: 30px;
+.status p {
+   color: #fff;
+   font-weight: 700;
+   text-transform: uppercase;
+   font-size: 1.8rem;
+   padding-left: 30px;
 }
-.housebtn{
-    background-color: hsl(237, 49%, 15%,0.5);
-    width: 140px;
-    height: 140px;
-    justify-self: center;
+.housebtn {
+   background-color: hsl(237, 49%, 15%, 0.5);
+   width: 160px;
+   height: 160px;
+   justify-self: center;
 }
-.scissors{
-    background-color: #fff;
-    width: 160px;
-    height: 160px;
-    box-shadow: inset 1px 9px hsl(0, 20%, 88%,0.7), 0px 12px 0px 20px hsl(39, 89%, 37%);
-    outline: 24px solid  hsl(40, 84%, 53%);
+.scissors {
+   background-color: #fff;
+   width: 160px;
+   height: 160px;
+   box-shadow: inset 1px 9px hsl(0, 20%, 88%, 0.7),
+      0px 12px 0px 20px hsl(39, 89%, 37%);
+   outline: 24px solid hsl(40, 84%, 53%);
 }
-.rock{
-    background-color: #fff;
-    width: 160px;
-    height: 160px;
-    box-shadow: inset 1px 8px hsl(0, 20%, 88%,0.7),0px 12px 0px 20px hsl(349, 71%, 52%);
-    outline: 24px solid hsl(349, 70%, 56%);
+.rock {
+   background-color: #fff;
+   width: 160px;
+   height: 160px;
+   box-shadow: inset 1px 8px hsl(0, 20%, 88%, 0.7),
+      0px 12px 0px 20px hsl(349, 71%, 52%);
+   outline: 24px solid hsl(349, 70%, 56%);
 }
-.lizard{
-    background-color: #fff;
-    width: 160px;
-    height: 160px;
-    box-shadow: inset 1px 8px hsl(0, 20%, 88%,0.7),0px 12px 0px 20px hsl(261, 73%, 60%);
-    outline: 24px solid hsl(261, 72%, 63%);
+.lizard {
+   background-color: #fff;
+   width: 160px;
+   height: 160px;
+   box-shadow: inset 1px 8px hsl(0, 20%, 88%, 0.7),
+      0px 12px 0px 20px hsl(261, 73%, 60%);
+   outline: 24px solid hsl(261, 72%, 63%);
 }
-.spock{
-    background-color: #fff;
-    width: 160px;
-    height: 160px;
-    box-shadow: inset 1px 8px hsl(0, 20%, 88%,0.7),0px 12px 0px 20px hsl(189, 59%, 43%);
-    outline: 24px solid hsl(189, 58%, 57%);
+.spock {
+   background-color: #fff;
+   width: 160px;
+   height: 160px;
+   box-shadow: inset 1px 8px hsl(0, 20%, 88%, 0.7),
+      0px 12px 0px 20px hsl(189, 59%, 43%);
+   outline: 24px solid hsl(189, 58%, 57%);
 }
-.paper{
-    background-color: #fff;
-    width: 160px;
-    height: 160px;
-    box-shadow: inset 1px 8px hsl(0, 20%, 88%,0.7),0px 12px 0px 20px hsl(230, 89%, 60%);
-    outline: 24px solid hsl(230, 89%, 65%);
+.paper {
+   background-color: #fff;
+   width: 160px;
+   height: 160px;
+   box-shadow: inset 1px 8px hsl(0, 20%, 88%, 0.7),
+      0px 12px 0px 20px hsl(230, 89%, 60%);
+   outline: 24px solid hsl(230, 89%, 65%);
 }
-.rules{
-    display: none;
-    width: 380px;
-    height: 400px;
-    background-color: #fff;
-    border-radius: 10px;
-    margin: auto;
-    position: absolute;
-    top: 80px;
-    left: 36%;
-    z-index: 99;
+.rules {
+   display: none;
+   width: 380px;
+   height: 400px;
+   background-color: #fff;
+   border-radius: 10px;
+   margin: auto;
+   position: absolute;
+   top: 80px;
+   left: 36%;
+   z-index: 99;
 }
-.rules div{
-    padding-left: 1.4rem;
-    padding-top: 1.4rem;
-    padding-right: 1.4rem;
-    display: flex;
-    justify-content: space-between;
-    text-transform: uppercase;
-    color: var(--Dark-Text);
+.rules div {
+   padding-left: 1.4rem;
+   padding-top: 1.4rem;
+   padding-right: 1.4rem;
+   display: flex;
+   justify-content: space-between;
+   text-transform: uppercase;
+   color: var(--Dark-Text);
 }
-.rules button{
-    width: fit-content;
-    height: auto;
-    background-color: transparent;
-    margin-top: 10px; 
+.rules button {
+   width: fit-content;
+   height: auto;
+   background-color: transparent;
+   margin-top: 10px;
 }
-.rules figure{
+.rules figure {
    margin: auto;
    width: 80%;
    flex: 1;
    margin-top: -20px;
 }
-.rules img{
-    width: 100%;
-    height: auto;
+.rules img {
+   width: 100%;
+   height: auto;
 }
-.rulesbtn{
-    border-radius: 8px;
-    height: 40px;
-    width: 120px;
-    border: 2px solid var(--Header-Outline);
-    background-color: transparent;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 0.1rem;
-    margin-right: 50px;
-    margin-bottom: 40px;
+.rulesbtn {
+   border-radius: 8px;
+   height: 40px;
+   width: 120px;
+   border: 2px solid var(--Header-Outline);
+   background-color: transparent;
+   color: #fff;
+   text-transform: uppercase;
+   font-weight: 600;
+   letter-spacing: 0.1rem;
+   margin-right: 50px;
+   margin-bottom: 40px;
 }
-footer{
+footer {
    position: absolute;
    bottom: 0;
    right: 0;
