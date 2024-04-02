@@ -24,6 +24,7 @@
  --Radial-Gradient: hsl(214, 47%, 23%) to hsl(237, 49%, 15%);
 }
 body{
+    position: relative;
     min-height: 100vh;
     background: radial-gradient(hsl(214, 47%, 23%),hsl(237, 49%, 15%));
     font-family: "Barlow Semi Condensed", sans-serif;
@@ -66,7 +67,7 @@ figure img{
     font-weight: 700;
 }
 .startGame{
-    display: none;
+    /* display: none; */
     position: relative;
     width: 100%;
     max-width: 400px;
@@ -127,19 +128,24 @@ button{
     display: flex;
     margin: 50px auto;
     justify-content: center;
-    gap: 60px;
-    /* display: none; */
+    display: none;
 }
 .player,.house,.status{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+.house{
+    margin-left: 30px;
+}
+.player{
+    margin-right: 30px;
+    /* background: repeating-radial-gradient(circle at 50%, hsl(214, 47%, 23%) 15%, hsl(237, 49%, 15%) 30%); */
+}
 .status{
     /* display: none; */
     margin-top: 50px;
     align-self: center;
-    margin-left: 10px;
 }
 .status button{
     height: 35px;
@@ -209,4 +215,59 @@ button{
     height: 160px;
     box-shadow: inset 1px 8px hsl(0, 20%, 88%,0.7),0px 12px 0px 20px hsl(230, 89%, 60%);
     outline: 24px solid hsl(230, 89%, 65%);
+}
+.rules{
+    display: none;
+    width: 380px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: auto;
+    position: absolute;
+    top: 80px;
+    left: 36%;
+    z-index: 99;
+}
+.rules div{
+    padding-left: 1.4rem;
+    padding-top: 1.4rem;
+    padding-right: 1.4rem;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    color: var(--Dark-Text);
+}
+.rules button{
+    width: fit-content;
+    height: auto;
+    background-color: transparent;
+    margin-top: 10px; 
+}
+.rules figure{
+   margin: auto;
+   width: 80%;
+   flex: 1;
+   margin-top: -20px;
+}
+.rules img{
+    width: 100%;
+    height: auto;
+}
+.rulesbtn{
+    border-radius: 8px;
+    height: 40px;
+    width: 120px;
+    border: 2px solid var(--Header-Outline);
+    background-color: transparent;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    margin-right: 50px;
+    margin-bottom: 40px;
+}
+footer{
+   position: absolute;
+   bottom: 0;
+   right: 0;
 }
