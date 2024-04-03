@@ -85,7 +85,7 @@ gameButtons.forEach((gameButton, index) => {
    };
 });
 rulesBtn.onclick = () => {
-   rules.style.display = "block";
+   rules.style.display = "flex";
    otherContainers.forEach(
       (otherContainer) => (otherContainer.style.opacity = "0.5")
    );
