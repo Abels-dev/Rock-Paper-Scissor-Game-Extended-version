@@ -24,6 +24,7 @@ const changeLayout = (choice) => {
 const houseChoice = (choice) => {
    houseChoiced.innerHTML = `<img src="images/icon-${choice}.svg">`;
    houseChoiced.classList.add(choice);
+   houseChoiced.style.backgroundColor="#fff";
 };
 let userScore = 0;
 if (Number(localStorage.getItem("score")) != null)
@@ -81,6 +82,7 @@ gameButtons.forEach((gameButton, index) => {
          userChoice.classList.remove(choices[index]);
          statusField.style.display = "none";
          gamePage.style.display = "block";
+         houseChoiced.style.backgroundColor="hsl(237, 49%, 15%, 0.5)";
       };
    };
 });
