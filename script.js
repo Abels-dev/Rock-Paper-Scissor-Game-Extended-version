@@ -12,6 +12,8 @@ const rules = document.getElementById("rules");
 const rulesBtn = document.querySelector(".rulesbtn");
 const result = document.getElementById("result");
 const closeRules = document.getElementById("close");
+const playerBoard = document.querySelector(".player");
+const houseBoard = document.querySelector(".house");
 const choices = ["scissors", "spock", "lizard", "rock", "paper"];
 const getComputerChoice = () => choices[Math.floor(Math.random() * 5)];
 
@@ -24,7 +26,7 @@ const changeLayout = (choice) => {
 const houseChoice = (choice) => {
    houseChoiced.innerHTML = `<img src="images/icon-${choice}.svg">`;
    houseChoiced.classList.add(choice);
-   houseChoiced.style.backgroundColor="#fff";
+   houseChoiced.style.backgroundColor = "#fff";
 };
 let userScore = 0;
 if (Number(localStorage.getItem("score")) != null)
@@ -41,9 +43,13 @@ const scoreTracker = (winStatus) => {
 const statusDisplay = () => {
    statusField.style.display = "flex";
    score.textContent = userScore;
+   if (result.textContent == "You Win") // add background effect for the winner
+      playerBoard.classList.add("winnerEffect");
+   else if (result.textContent == "You Lose")
+      houseBoard.classList.add("winnerEffect");
 };
 const gamePlay = (choice) => {
-   let isWin;  // tracks the win or lose of the player
+   let isWin; // tracks the win or lose of the player
    let computerChoice = getComputerChoice();
    if (choice === computerChoice) {
       result.textContent = "You Draw";
@@ -75,14 +81,20 @@ gameButtons.forEach((gameButton, index) => {
       let computerChoice = gamePlay(choices[index]);
       setTimeout(() => houseChoice(computerChoice), 1000);
       setTimeout(statusDisplay, 2000);
-      playAgain.onclick = () => {  // reset the changes and start the game again 
+      playAgain.onclick = () => {
+         // reset all the changes and start the game again
          inGamePage.style.display = "none";
          houseChoiced.innerHTML = ``;
          houseChoiced.classList.remove(computerChoice);
+         if (houseBoard.classList.contains("winnerEffect"))
+            houseBoard.classList.remove("winnerEffect");
+         if (playerBoard.classList.contains("winnerEffect"))
+            playerBoard.classList.remove("winnerEffect");
+
          userChoice.classList.remove(choices[index]);
          statusField.style.display = "none";
          gamePage.style.display = "block";
-         houseChoiced.style.backgroundColor="hsl(237, 49%, 15%, 0.5)";
+         houseChoiced.style.backgroundColor = "hsl(237, 49%, 15%, 0.5)";
       };
    };
 });
