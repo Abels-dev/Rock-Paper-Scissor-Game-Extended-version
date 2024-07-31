@@ -31,3 +31,6 @@ Users should be able to:
 - Rock beats Scissors
 - Lizard beats Paper
 - Spock beats Rock
+
+### Preview
+- https://abels-dev.github.io/Rock-Paper-Scissor-Game-Extended-version/
