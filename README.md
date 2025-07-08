@@ -33,4 +33,4 @@ Users should be able to:
 - Spock beats Rock
 
 ### Preview
-- https://abels-dev.github.io/Rock-Paper-Scissor-Game-Extended-version/
+-https://rock-paper-scissor-game-extended-ve.vercel.app/
